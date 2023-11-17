@@ -1,0 +1,139 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 90px;
+  width: 600px;
+  background: linear-gradient(rgb(67, 0, 0),black);
+  border-radius: 50px;
+  margin-bottom: 30px;
+  box-shadow: inset 3px 3px 5px #260000, inset -3px -3px 5px #000000;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.text {
+  color: rgba(255, 255, 255, 0.756);
+  text-shadow: 6px 3px #750000;
+  text-align: center;
+  font-weight: 760;
+  font-size: 39px;
+}
+.underline {
+  width: 150px;
+  height: 5px;
+  background-color: rgb(140, 255, 0);
+  border-radius: 6px;
+}
+.inputs {
+  margin-top: 10px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  height: 60px;
+  width: 450px;
+  background: rgb(244, 244, 244);
+  border-radius: 50px;
+  box-shadow: 5px 5px 4px #750000, -3px -3px 5px #555555;
+}
+.input input {
+  height: 50px;
+  width: 400px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: rgb(30, 30, 30);
+  font-size: 16pxs;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 0px 30px;
+}
+.forget-password {
+  display: flex;
+  padding-left: 62px;
+  margin-top: 27px;
+  font-size: 18px;
+  color: #afafaf;
+  align-content: center;
+}
+.forget-password span {
+  color: rgb(111, 255, 0);
+  font-style: italic;
+  cursor: pointer;
+}
+.submit-container {
+  gap: 30px;
+  display: flex;
+  margin: 60px auto;
+  align-items: center;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 45px;
+  background: rgb(124, 0, 0);
+  box-shadow: 3px 4px rgb(53, 0, 0);
+  color:white;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.gray{
+    background: #afafaf;
+    box-shadow: 3px 3px#555555;
+    color: #3b3b3b;
+}
+@media screen and (max-width: 768px) {
+    .container {
+      margin: 26% auto;
+    }
+  
+    .input {
+      width: 70%;
+    }
+  
+    .input input {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 412px) {
+    .container {
+      margin: 36% auto;
+      width: 85%;
+    }
+  
+    .input {
+      width: 90%;
+      height: 80%;
+    }
+  
+    .input input {
+      width: 100%;
+    }
+  
+    .submit-container {
+      flex-direction: column;
+    }
+  
+    .submit {
+      width: 200%;
+      margin-top: 5px;
+    }
+  }
