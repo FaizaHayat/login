@@ -8,6 +8,25 @@ import reenter from '../image/reenter.png'
 function Signup() {
 
 const [action,setAction] = useState("Sign up");
+const [password, setPassword] = useState("");
+const [reenterPassword, setReenterPassword] = useState("");
+const [passwordmatch, setPasswordMatch] = useState("true");
+
+const handlePasswordChange = (e) => {
+  setPassword(e.target.value);
+};
+
+const handleReenteredPasswordChange = (e) => {
+  setReenterPassword(e.target.value);
+};
+
+const checkPasswordMatch = () => {
+  setPasswordMatch(password === reenterPassword);
+};
+
+
+
+
   return (
     <div className="container">
       <div className='header'>
@@ -18,24 +37,29 @@ const [action,setAction] = useState("Sign up");
 
         <div className='input'>
           <img className="icon" src={user} alt="" />
-          <input type='' placeholder='Username' />
+          <input type='name' placeholder='Username' />
         </div>
          
         {action==="Log in"?<div></div>:<div className='input'>
         <img className="icon" src={gmail} alt='' />
-        <input type='' placeholder='Gmail' />
+        <input type='Gmail' placeholder='Gmail' />
       </div>}
         
 
         <div className='input'>
           <img className="icon" src={lock} alt='' />
-          <input type='' placeholder='Password' />
+          <input type='password' placeholder='Password' value={password}
+          onChange={handlePasswordChange} />
         </div>
 
         {action==="Log in"?<div></div>:<div className='input'>
           <img className="icon" src={reenter} alt='' />
-          <input type='' placeholder='Password' />
-        </div>}</div>
+          <input type='password' placeholder='Password'  value={reenterPassword}
+          onChange={handleReenteredPasswordChange}
+          onBlur={checkPasswordMatch} />
+          {!passwordmatch && <p className='warn'>Passwords do not match</p>}
+        </div>}
+        </div>
 
         {action==="Sign up"?<div></div>:
         <div className='forget-password'>Do not remember? <span>click here!</span></div>}
